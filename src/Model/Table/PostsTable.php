@@ -9,8 +9,6 @@ use Posts\Model\Entity\Post;
 
 /**
  * Posts Model
- *
- * @property \Cake\ORM\Association\BelongsToMany $Phinxlog
  */
 class PostsTable extends Table
 {
@@ -30,13 +28,7 @@ class PostsTable extends Table
         $this->primaryKey('id');
 
         $this->addBehavior('Timestamp');
-
-        $this->belongsToMany('Phinxlog', [
-            'foreignKey' => 'post_id',
-            'targetForeignKey' => 'phinxlog_id',
-            'joinTable' => 'posts_phinxlog',
-            'className' => 'Posts.Phinxlog'
-        ]);
+        $this->addBehavior('Muffin/Slug.Slug');
     }
 
     /**

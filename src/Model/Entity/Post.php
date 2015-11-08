@@ -17,7 +17,7 @@ use Cake\ORM\Entity;
  */
 class Post extends Entity
 {
-    const STATUS_DRAFT= 0;
+    const STATUS_DRAFT = 0;
     const STATUS_WAITING_FOR_APPROVAL = 1;
     const STATUS_PUBLISHED = 2;
 

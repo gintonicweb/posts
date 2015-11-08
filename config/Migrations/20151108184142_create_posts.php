@@ -18,6 +18,11 @@ class CreatePosts extends AbstractMigration
                 'limit' => 255,
                 'null' => false,
             ])
+            ->addColumn('slug', 'string', [
+                'default' => null,
+                'limit' => 255,
+                'null' => false,
+            ])
             ->addColumn('body', 'text', [
                 'default' => null,
                 'null' => false,
