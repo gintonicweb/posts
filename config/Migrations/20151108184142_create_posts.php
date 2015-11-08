@@ -13,6 +13,7 @@ class CreatePosts extends AbstractMigration
     public function change()
     {
         $table = $this->table('posts');
+        $table
             ->addColumn('title', 'string', [
                 'default' => null,
                 'limit' => 255,
@@ -31,7 +32,7 @@ class CreatePosts extends AbstractMigration
                 'default' => null,
                 'null' => false,
             ])
-            ->addColumn('status', 'tinyint', [
+            ->addColumn('status', 'integer', [
                 'default' => 0,
                 'limit' => 4,
                 'null' => false,
